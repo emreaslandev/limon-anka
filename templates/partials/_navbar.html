@@ -11,6 +11,7 @@
         <li><a href="{% url 'brands' %}" class="{% if request.resolver_match.url_name == 'brands' %}active{% endif %}">Brands</a></li>
         <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
         <li><a href="{% url 'faqs' %}" class="{% if request.resolver_match.url_name == 'faqs' %}active{% endif %}">FAQS</a></li>
+        <li><a href="{% url 'features' %}" class="{% if request.resolver_match.url_name == 'features' %}active{% endif %}">Features</a></li>
         <li><a href="{% url 'gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">Gallery</a></li>
         <li><a href="{% url 'product_list' %}" class="{% if request.resolver_match.url_name == 'product_list' %}active{% endif %}">Products</a></li>
         <li><a href="{% url 'referance_list' %}" class="{% if request.resolver_match.url_name == 'referance_list' %}active{% endif %}">Referances</a></li>
