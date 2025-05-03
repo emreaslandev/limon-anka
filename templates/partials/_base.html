@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{%block title%} {%endblock%} - MISH-DAIRY - {{contact.phone}}</title>
+    <!-- Favicon for Google Search Results and All Browsers -->
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="32x32">
+    <!-- Favicon for Apple Devices -->
+    <link rel="apple-touch-icon" href="{% static 'img/logo.png' %}" sizes="180x180">
+    <!-- Favicon for Android Devices -->
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="192x192">
+    <!-- Favicon for Microsoft Devices -->
+    <meta name="msapplication-TileImage" content="{% static 'img/logo.png' %}">
+    <!-- Favicon for High-Resolution Devices -->
+    <link rel="icon" href="{% static 'img/logo.png' %}" type="image/png" sizes="16x16">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/logo.png' %}">
+
+    {% comment %} <meta name="description" content="Derya Av Pazarı: Balık av malzemeleri, avcılık ekipmanları ve özel üretim balık tutma ağlarında kaliteli ürünler. Türkiye geneline hızlı kargo!">
+    <meta name="keywords" content="Derya Av Pazarı, balık av malzemeleri, avcılık ekipmanları, balık ağı üretimi, Malatya av malzemeleri, olta, yem, kargo ile av malzemeleri">
+    <meta name="author" content="Derya Av Pazarı">
+    <meta name="robots" content="index, follow">
+  
+    <!-- Open Graph (Facebook ve Sosyal Medya için) -->
+    <meta property="og:title" content="Derya Av Pazarı - Balık ve Av Malzemelerinde Güvenilir Adres">
+    <meta property="og:description" content="Balık av malzemeleri, avcılık ekipmanları ve özel üretim balık ağları. Türkiye geneline hızlı kargo ve uygun fiyatlarla hizmet sunuyoruz!">
+    <meta property="og:image" content="https://deryabalikavmalzemeleri.com/og-image.jpg"> <!-- Örnek görsel URL'si -->
+    <meta property="og:url" content="https://deryabalikavmalzemeleri.com">
+    <meta property="og:type" content="website">
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Derya Av Pazarı - Balık ve Av Malzemelerinde Güvenilir Adres">
+    <meta name="twitter:description" content="Balık av malzemeleri, avcılık ekipmanları ve özel üretim balık ağları. Türkiye geneline hızlı kargo ve uygun fiyatlarla hizmet sunuyoruz!">
+    <meta name="twitter:image" content="https://deryabalikavmalzemeleri.com/twitter-image.jpg"> <!-- Örnek görsel URL'si -->
+  
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://deryabalikavmalzemeleri.com"> {% endcomment %}
+
+
+        <!-- CSS -->
+
+</head>
+
+
+
+        <!-- body label -->
+<body {%block bodyclass%} {% endblock %} >
+            <!-- navbar -->
+    {%  include 'partials/_navbar.html' %}
+
+
+            <!-- body -->
+    <main id="main">
+        {% block content %} {% endblock  %}
+    </main>
+
+
+
+
+            <!-- footer -->
+    {%  include 'partials/_footer.html' %}
+    {%  include 'partials/_emreyn.html' %}
+    {%  include 'partials/_contact.html' %}
+
+
+
+
+        <!-- Javascript -->
+
+
+    <!-- Bootstrap 5 CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        <!-- CKEditor 5 CDN -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/translations/tr.js"></script>
+
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#id_page_content'))
+            .catscriptor => {
+                console.error(error);
+            });
+    </script>
+    
+</body>
+
+</html>

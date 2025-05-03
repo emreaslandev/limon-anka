@@ -1,0 +1,23 @@
+{% load static %}
+
+
+
+
+<nav id="navmenu" class="navmenu">
+    <ul>
+        <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a></li>
+        <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+        <li><a href="{% url 'blog_list' %}" class="{% if request.resolver_match.url_name == 'blog_list' %}active{% endif %}">Blog</a></li>
+        <li><a href="{% url 'brands' %}" class="{% if request.resolver_match.url_name == 'brands' %}active{% endif %}">Brands</a></li>
+        <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+        <li><a href="{% url 'faqs' %}" class="{% if request.resolver_match.url_name == 'faqs' %}active{% endif %}">FAQS</a></li>
+        <li><a href="{% url 'gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">Gallery</a></li>
+        <li><a href="{% url 'product_list' %}" class="{% if request.resolver_match.url_name == 'product_list' %}active{% endif %}">Products</a></li>
+        <li><a href="{% url 'referance_list' %}" class="{% if request.resolver_match.url_name == 'referance_list' %}active{% endif %}">Referances</a></li>
+        <li><a href="{% url 'service_list' %}" class="{% if request.resolver_match.url_name == 'service_list' %}active{% endif %}">Services</a></li>
+        <li><a href="{% url 'sliders' %}" class="{% if request.resolver_match.url_name == 'sliders' %}active{% endif %}">Sliders</a></li>
+        <li><a href="{% url 'stats' %}" class="{% if request.resolver_match.url_name == 'stats' %}active{% endif %}">Stats</a></li>
+        <li><a href="{% url 'testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}active{% endif %}">Testimonial</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+  </nav>

@@ -1,0 +1,51 @@
+{% load static %}
+
+<style>
+  /* EMREYN FOOTER */
+  #emreyn-footer {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #emreyn-footer img {
+    margin-bottom: 20px;
+  }
+
+  #emreyn-footer small {
+    margin-bottom: 15px;
+  }
+
+  #emreyn-footer .emreyn-contacts a {
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  #emreyn-footer a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  /* END EMREYN FOOTER */
+</style>
+
+
+
+<div id="emreyn-footer" style="background-image: url('{% static 'emreyn-footer/emreyn-footer-bg.png' %}');">
+  <a href="https://www.emreynyazilim.com" target="_blank"><img class="img-fluid" style="max-width: 60px;" alt="emreyn yazılım sanayi ve ticaret limited şirketi" src="{% static 'emreyn-footer/emreyn-logo.png' %}" /></a>
+  <small>Bu web sitesi <a target="_blank" href="https://www.emreynyazilim.com">EMREYN YAZILIM SANAYİ VE TİCARET LİMİTED ŞİRKETİ</a> tarafından oluşturulmuştur.</small>
+  <div class="emreyn-contacts">
+    <a target="_blank" href="tel:+905448111927"><i class="bi bi-telephone"></i> </a>
+    <a target="_blank" href="https://api.whatsapp.com/send?phone=905448111927"><i class="bi bi-whatsapp"></i> </a>
+    <a target="_blank" href="https://instagram.com/emreynyazilim"><i class="bi bi-instagram"></i> </a>
+  </div>
+</div>
