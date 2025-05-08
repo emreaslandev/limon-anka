@@ -9,7 +9,7 @@ urlpatterns = [
     path('ckeditor5/', include('django_ckeditor_5.urls')),
 
     path('', include('apps.homepage.urls')),
-    path('about-us/', include('apps.about.urls')),
+    path('hakkimizda/', include('apps.about.urls')),
     path('brands/', include('apps.brands.urls')),
     path('blogs/', include('apps.blogs.urls')),
     path('contact/', include('apps.contact.urls')),

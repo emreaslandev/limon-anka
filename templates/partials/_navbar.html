@@ -1,9 +1,79 @@
 {% load static %}
 
+<header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center light-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>05448111927</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+            <h1 class="sitename">LİMON<span style="color: #FFA500;">ANKA</span></h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">ANASAYFA</a></li>
+            <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">HAKKIMIZDA</a></li>
+            <li><a href="{% url 'blog_list' %}" class="{% if request.resolver_match.url_name == 'blog_list' %}active{% endif %}">BLOG</a></li>
+            {% comment %} <li><a href="{% url 'brands' %}" class="{% if request.resolver_match.url_name == 'brands' %}active{% endif %}">Brands</a></li> {% endcomment %}
+            <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">İLETİŞİM</a></li>
+            <li><a href="{% url 'faqs' %}" class="{% if request.resolver_match.url_name == 'faqs' %}active{% endif %}">S.S.S.</a></li>
+            {% comment %} <li><a href="{% url 'features' %}" class="{% if request.resolver_match.url_name == 'features' %}active{% endif %}">Features</a></li> {% endcomment %}
+            <li><a href="{% url 'gallery' %}" class="{% if request.resolver_match.url_name == 'gallery' %}active{% endif %}">GALERİ</a></li>
+            <li><a href="{% url 'product_list' %}" class="{% if request.resolver_match.url_name == 'product_list' %}active{% endif %}">ÜRÜNLERİMİZ</a></li>
+            {% comment %} <li><a href="{% url 'referance_list' %}" class="{% if request.resolver_match.url_name == 'referance_list' %}active{% endif %}">Referances</a></li> {% endcomment %}
+            {% comment %} <li><a href="{% url 'service_list' %}" class="{% if request.resolver_match.url_name == 'service_list' %}active{% endif %}">Services</a></li> {% endcomment %}
+            {% comment %} <li><a href="{% url 'sliders' %}" class="{% if request.resolver_match.url_name == 'sliders' %}active{% endif %}">Sliders</a></li> {% endcomment %}
+            {% comment %} <li><a href="{% url 'stats' %}" class="{% if request.resolver_match.url_name == 'stats' %}active{% endif %}">Stats</a></li> {% endcomment %}
+            {% comment %} <li><a href="{% url 'testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}active{% endif %}">Testimonial</a></li> {% endcomment %}
 
 
+            {% comment %} <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> {% endcomment %}
 
-<nav id="navmenu" class="navmenu">
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+{% comment %} <nav id="navmenu" class="navmenu">
     <ul>
         <li><a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a></li>
         <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
@@ -21,4 +91,4 @@
         <li><a href="{% url 'testimonials' %}" class="{% if request.resolver_match.url_name == 'testimonials' %}active{% endif %}">Testimonial</a></li>
     </ul>
     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-  </nav>
+  </nav> {% endcomment %}
