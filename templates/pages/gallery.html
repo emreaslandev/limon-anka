@@ -1,20 +1,28 @@
 {% extends 'partials/_base.html' %}
 {% load static %}
 
-{% block title %}{% endblock %}
+{% block title %}GALERİ{% endblock %}
 {% block bodyclass %}class="portfolio-page"{% endblock %}
 
 
 
 
 {% block content %}
-
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">GALERİ</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'index' %}">ANASAYFA</a></li>
+            <li class="current">GALERİ</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
   <!-- Portfolio Section -->
   <section id="portfolio" class="portfolio section">
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Our Gallery</h2>
-    </div><!-- End Section Title -->
+
 
     <div class="container">
         <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -24,14 +32,14 @@
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-item-inner">
               {% if gallery.type == 'img' %}
-                <img src="{{ gallery.file.url }}" class="img-fluid border border-2 border-dark rounded-3" alt="" style="width: 100%; height: 250px; object-fit: cover;" />
+                <img src="{{ gallery.file.url }}" class="img-fluid border border border-2 border-warning rounded-3" alt="" style="width: 100%; height: 250px; object-fit: cover;" />
               {% elif gallery.type == 'vid' %}
-                <video class="img-fluid border border-2 border-dark rounded-3" style="width: 100%; height: 250px; object-fit: cover;" controls>
+                <video class="img-fluid border border border-2 border-warning rounded-3" style="width: 100%; height: 250px; object-fit: cover;" controls>
                   <source src="{{ gallery.file.url }}" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               {% endif %}
-                <div class="portfolio-info justify-content-center align-items-center d-flex"> 
+                <div class="portfolio-info justify-content-center align-items-center d-flex border border-2 border-warning rounded-3"> 
                 <a href="{{ gallery.file.url }}" data-gallery="portfolio-gallery-app" class="glightbox" style="font-size: 2rem;"><i class="bi bi-zoom-in"></i></a>
                 </div>
             </div>

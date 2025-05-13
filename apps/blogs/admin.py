@@ -10,6 +10,7 @@ class MediaInline(admin.TabularInline):
     extra = 1
 
 class BlogAdmin(admin.ModelAdmin):
+    inlines = [MediaInline]
     list_display = ('title', 'category', 'is_active', 'order', 'slug', 'created_at', 'updated_at')
     list_editable = ('order', 'is_active')
     search_fields = ('title', 'content')
